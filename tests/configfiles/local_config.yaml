@@ -1,0 +1,15 @@
+version: "1.0.0"
+app_name: "wh-accounting"
+port: 8009
+log:
+  name: "wh-accounting"
+  level: INFO
+  format: "%(asctime)-15s %(name)-15s - %(levelname)-6s : %(message)s"
+db:
+  connection_string: postgresql://myusername:mypassword@localhost:5432/postgres
+  schema: accounting
+  connect_args:
+    command_timeout: 30
+    server_settings: { 'application_name': 'wh-accounting' }
+  log:
+    level: INFO

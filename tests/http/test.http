@@ -1,0 +1,11 @@
+GET http://localhost:8009/top_10_accounts
+
+###
+
+POST http://0.0.0.0:8009/create_account
+Content-Type: application/json
+
+{
+  "name": "Vasya",
+  "balance": 100
+}
